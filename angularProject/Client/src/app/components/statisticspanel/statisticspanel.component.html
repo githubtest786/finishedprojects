@@ -1,0 +1,23 @@
+<div>
+
+    <img src="assets/layout/statistics.png">
+
+    <br>
+    <div>
+        Available products in our store - <span class = "info">{{ numberOfProducts.number }}</span><br>
+        Number of orders submitted in our store - <span class = "info">{{ numberOfOrders.number }}</span><br>
+    </div>
+    <ng-template [ngIf]="currentUserCart.creation_date === 'User_offline'">
+        Welcome to our website! <br>
+        <span class = "info">You are required to login before attempting to use our services.</span>
+    </ng-template>
+    <ng-template [ngIf]="currentUserCart.creation_date != null && currentUserCart.creation_date !== 'User_offline' && currentUserCart.order_date == null">
+        You have an open cart from <span class = "info">{{ currentUserCart.creation_date }}</span>
+    </ng-template>
+    <ng-template [ngIf]="currentUserCart.creation_date != null && currentUserCart.order_date != null">
+        Your last purchase was on <span class = "info">{{ currentUserCart.order_date }}</span>
+    </ng-template>
+    <ng-template [ngIf]="currentUserCart.creation_date == null && currentUserCart.order_date == null">
+        You have yet to make any purchases.
+    </ng-template>
+</div>

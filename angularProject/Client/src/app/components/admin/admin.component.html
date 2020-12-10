@@ -1,0 +1,91 @@
+<section>
+    <aside>
+        <div class = "editZoneHeader">
+            <span class = "editZoneTitle">
+                Products
+            </span>
+                <span class = "clearButton">
+                    <input type="button" class="newProduct" (click)="addNewProduct()" value = "+" />
+                </span>
+        </div>
+        <div>
+            <div class = "editZoneContents">
+                <br>
+                <span class = "editZoneNotice" *ngIf="newProduct">
+                    You are currently in the "adding new product" mode.
+                </span>
+                <span class = "editZoneNotice" *ngIf="!newProduct">
+                    You are currently editing the product called {{original_product_name}}.
+                </span>
+                <br>
+                <input type="text" placeholder="Name" name="productname" [(ngModel)]="productDetails.product_name"><br>
+                <input type="text" placeholder="Category" name="categoryname" [(ngModel)]="productDetails.category_name"><br>
+                <input type="text" placeholder="Price" name="price" [(ngModel)]="productDetails.price"><br>
+                    <button (click)="onClick()">
+                        Upload Image
+                    </button>
+                    <li *ngFor="let file of files">
+                        <span id="file-label">
+                            {{file.name}}
+                        </span>
+                    </li>
+            <input type="file" #fileUpload id="fileUpload" name="fileUpload" multiple="multiple" accept="image/*" style="display:none;" />
+                <br>
+                <span *ngIf="newProduct">
+                    <input type="button" (click)="sendNewProduct()" value="Add new product" />
+                </span>
+                <span *ngIf="!newProduct">
+                    <input type="button" (click)="sendUpdatedProduct()" value="Edit product" />
+                </span>
+            </div>
+    
+        </div>
+    
+    </aside>
+    <main>
+        <div class = "categoryHeader">
+            <input type="button" class="" (click)="resetFilter()" value="Reset" /> ||
+            <span *ngFor = "let category of categories; let i = index">
+                <input type="button" class="categories" (click)="pickCategory(category.category_name)" value="{{ category.category_name }}" /> ||
+            </span>
+            <input type="text" placeholder="Search" name="search" [(ngModel)] = "searchName"> <input type="button" class ="" (click)="nameFilter(searchName)" value="Search" />
+        </div>
+        <div class = "products">
+            <div *ngFor = "let product of products; let i = index">
+                <ng-template [ngIf]="currentProductPage == null">
+                    <div class = "product">
+                        <img src="http://localhost:3000/{{product.image}}"  width="80%" height="80%">
+                        <br>
+                        Name: {{ product.product_name }}
+                        <br>
+                        Price: {{ product.price }}
+                        <br>
+                        <input type="button" (click)="editProduct(product.product_name, product.category_name, product.price, product.image)" value = "Edit product" />
+                    </div>
+                </ng-template>
+                <ng-template [ngIf]="filterButtonPressed && currentProductPage == product.product_name">
+                    <div class = "product">
+                        <img src="http://localhost:3000/{{product.image}}"  width="80%" height="80%">
+                        <br>
+                        Name: {{ product.product_name }}
+                        <br>
+                        Price: {{ product.price }}
+                        <br>
+                        <input type="button" (click)="editProduct(product.product_name, product.category_name, product.price, product.image)" value = "Edit product" />
+                    </div>
+                </ng-template>
+                <ng-template [ngIf]="currentProductPage == product.category_name">
+                    <div class = "product">
+                        <img src="http://localhost:3000/{{product.image}}"  width="80%" height="80%">
+                        <br>
+                        Name: {{ product.product_name }}
+                        <br>
+                        Price: {{ product.price }}
+                        <br>
+                        <input type="button" (click)="editProduct(product.product_name, product.category_name, product.price, product.image)" value = "Edit product" />
+                    </div>
+                </ng-template>
+            </div>
+        </div>     
+    </main>
+</section>

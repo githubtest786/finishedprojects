@@ -1,0 +1,51 @@
+
+
+.cartHeader {
+    height: 3.2vh;
+    background-color: #e0e0e0;
+    /* border-bottom: 1px solid rgb(92, 92, 92); */
+    border-right: 1px solid rgb(92, 92, 92);
+}
+
+.cartContents {
+    height: 76.8vh;
+    background-color: #e0e0e0;
+    overflow: auto;
+    border-right: 1px solid rgb(92, 92, 92);
+
+}
+
+.right {
+    float: right;
+}
+
+.totalPrice {
+    float: left;
+}
+
+.order {
+    float: right;
+}
+
+.headerTitle {
+    position: inline;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.clearButton {
+    float: right;
+}
+
+.minimize {
+    float: left;
+}
+
+.cartButtons {
+    height: 3vh;
+    width: 3vh;
+    /* background-color: #e8491d;
+    border: 0;
+    color: #ffffff;
+    font-weight: bold; */
+}

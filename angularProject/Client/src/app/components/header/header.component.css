@@ -1,0 +1,53 @@
+#header {
+    width: 90%;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+#title {
+    position: absolute;
+    float: left;
+    left: 25px;
+}
+
+h1 {
+    margin: 0;
+    font-weight: bold;
+}
+
+nav {
+    float: right;
+    margin-top: 25px;
+}
+
+.headerButton {
+    background: none!important;
+    border: none;
+    padding: 0!important;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.home {
+    color: #e8491d;
+}
+
+.headerButton:hover {
+    color: #6D4D90;
+}
+
+.brand {
+    color: #e8491d;
+}

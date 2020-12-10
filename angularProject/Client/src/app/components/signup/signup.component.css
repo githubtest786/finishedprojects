@@ -1,0 +1,80 @@
+.signup {
+    color: rgb(36, 32, 32);
+}
+
+.signUpContainer {
+    margin-top: 2%;
+    color: rgb(36, 32, 32);
+    width: 20%;
+}
+
+input[disabled]{
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+}
+
+input {
+    margin: 3px;
+    padding: 3px;
+}
+
+input:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+div {
+    margin: auto;
+}
+
+form {
+    column-span: all;
+}
+
+select {
+    margin: 5px;
+    padding: 5px;
+    float: left;
+}
+
+.signUpTitles {
+    font-size: 20px;
+    font-weight: bold;
+    float: left;
+}
+
+.registrationInputs {
+    float: left;
+}
+
+
+.passwordInput {
+    margin-left: -7.2%;
+}
+
+.backButton {
+    float: left;
+    height: 30px;
+    background-color: #e8491d;
+    border: 0;
+    color: #ffffff;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.forwardButton {
+    float: right;
+    height: 30px;
+    background-color: #e8491d;
+    border: 0;
+    color: #ffffff;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+#city {
+    float: left;
+}

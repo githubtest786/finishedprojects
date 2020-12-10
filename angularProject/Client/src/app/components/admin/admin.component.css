@@ -1,0 +1,75 @@
+section {
+    margin: 0;
+}
+
+aside {
+    float: left;
+    width: 20%;
+}
+
+main {
+    float: left;
+    width: 80%;
+}
+
+.categories {
+    background: none!important;
+    border: none;
+    padding: 0!important;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.categoryHeader {
+    font-weight: bold;
+    color: black;
+    background-color: #e0e0e0;
+    border-right: 1px solid rgb(92, 92, 92);
+    border-bottom: 1px solid rgb(92, 92, 92);
+    border-top: 1px solid rgb(92, 92, 92);
+}
+
+.product {
+    float: right;
+    width: 25%;
+    background-color: #e0e0e0;
+    color: black;
+    border: 1px solid rgb(92, 92, 92);
+}
+
+.editZoneHeader {
+    height: 3.2vh;
+    background-color: #e0e0e0;
+    /* border-bottom: 1px solid rgb(92, 92, 92); */
+    border-right: 1px solid rgb(92, 92, 92);
+}
+
+.editZoneContents {
+    height: 76.8vh;
+    background-color: #e0e0e0;
+    overflow-y: auto;
+    border-right: 1px solid rgb(92, 92, 92);
+    overflow-x: hidden;
+}
+
+.newProduct {
+    float: right;
+}
+
+.editZoneTitle {
+    position: inline;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.editZoneNotice {
+    position: inline;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.products {
+    height: 76.8vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}

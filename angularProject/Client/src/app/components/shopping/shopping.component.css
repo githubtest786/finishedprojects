@@ -1,0 +1,58 @@
+section {
+    margin: 0;
+}
+
+.asideNormal {
+    float: left;
+    width: 20%;
+}
+
+.asideGone {
+    width: 0%;
+    display: none;
+}
+
+.mainNormal {
+    float: left;
+    width: 80%;
+
+}
+
+.mainLarge {
+    float: left;
+    width: 100%;
+}
+
+.categories {
+    background: none!important;
+    border: none;
+    padding: 0!important;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.categoryHeader {
+    font-weight: bold;
+    color: black;
+    background-color: #e0e0e0;
+    border-right: 1px solid rgb(92, 92, 92);
+    border-bottom: 1px solid rgb(92, 92, 92);
+    border-top: 1px solid rgb(92, 92, 92);
+}
+
+.product {
+    float: right;
+    width: 25%;
+    background-color: #e0e0e0;
+    color: black;
+    border: 1px solid rgb(92, 92, 92);
+}
+
+.products {
+    height: 76.8vh;
+    overflow: auto;
+}
+
+.arrow {
+    float: left;
+}

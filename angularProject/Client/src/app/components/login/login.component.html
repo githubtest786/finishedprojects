@@ -1,0 +1,26 @@
+<div>
+
+    <img src="assets/layout/login.png">
+
+    <br>
+    <ng-template [ngIf]="isUserLoggedIn == false">
+        <form>
+            <input type="text" placeholder="Username" name="username" [(ngModel)]="userLoginDetails.email"><br>
+            <input type="password" placeholder="Password" name="password" [(ngModel)]="userLoginDetails.password"><br>
+            <input type="button" class="login_signup_buttons login" (click)="login()" value="Login" />
+            <input type="button" class="login_signup_buttons signup" (click)="signUp()" value="SignUp" />
+        </form> 
+    </ng-template>
+
+    <ng-template [ngIf]="isUserLoggedIn == true && currentUserCart.creation_date == null && currentUserCart.order_date == null || isUserLoggedIn == true && currentUserCart.creation_date != null && currentUserCart.order_date != null">
+        Hey {{ name }}, welcome back to our website!
+        <br>
+        <input type="button" class="login_signup_buttons" (click)="startShopping()" value="Start Shopping" />
+    </ng-template>
+    <ng-template [ngIf]="isUserLoggedIn == true && currentUserCart.creation_date != null && currentUserCart.order_date == null">
+        Hey {{ name }}, welcome back to our website!
+        <br>
+        <input type="button" class="login_signup_buttons" (click)="resumeShopping()" value="Resume Shopping" />
+    </ng-template>
+
+</div>
