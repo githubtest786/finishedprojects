@@ -1,0 +1,339 @@
+html {
+    overflow-y: scroll;
+}
+
+body {
+    background-image: url("tile.jpg");
+}
+
+.titleArea { 
+    position: absolute;
+    margin: -100px 0 0 -200px;
+    top: 20%;
+    left: 50%;
+    color: rgb(30, 19, 37);
+    font-family: "Varela Round";
+    text-shadow: -1.5px 0 rgb(30, 19, 37), 0 1.5px rgb(30, 19, 37), 1.5px 0 rgb(30, 19, 37), 0 -1.5px rgb(30, 19, 37); 
+}
+
+.formArea {
+    background-image: url("formbg.jpg");
+    position: absolute;
+    margin: -100px 0 0 -200px;
+    top: 35%;
+    left: 41%;
+    width: 600px;
+    height: 165px;
+}
+
+.taskDetails {
+    position: absolute;
+    top: 9.6%;
+    left: 12.8%;
+    width: 524px;
+    height: 30px;
+    background: transparent;
+    border: none;
+}
+
+.taskDate {
+    position: absolute;
+    top: 29.2%;
+    left: 12.8%;
+    width: 155px;
+    height: 30px;
+    background: transparent;
+    border: none;
+}
+
+.taskTime {
+    position: absolute;
+    top: 49.44%;
+    left: 12.8%;
+    width: 90px;
+    height: 30px;
+    background: transparent;
+    border: none;
+}
+
+.createTaskButton {
+    position: absolute;
+    top: 69.8%;
+    left: 12.8%;
+}
+
+.clearInputsButton {
+    position: absolute;
+    top: 69.8%;
+    left: 27%;
+}
+
+.taskArea {
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    display: inline-block;
+}
+
+.taskNote {
+    background-image: url("notebg.png");
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    height: 250px;
+}
+
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.taskInfo {
+    position: absolute;
+    top: 13%;
+    left: 5%;
+    width: 150px;
+    height: 152px;
+    overflow-wrap: break-word;
+    overflow-y: auto;
+    overflow-x: hidden;
+    color: darkslateblue;
+    font-style: oblique;
+    font-family: "Varela Round";
+}
+
+.taskDateAndTime {
+    position: absolute;
+    top: 76%;
+    left: 5%;
+    color: darkslateblue;
+    font-style: oblique;
+    font-family: "Varela Round";
+}
+
+.deleteOption {
+    visibility: hidden;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 80%;
+    top: 8%;
+}
+
+.taskNote:hover .deleteOption {
+    visibility: visible;
+}
+
+.detailsGlyph {
+    position: absolute;
+    left: 8%;
+    top: 15%;
+    width: 15px;
+    height: 15px;
+    color: rgb(73, 37, 204);
+}
+
+.detailsGlyph:hover {
+    color: darkblue;
+}
+
+.detailsGlyph2 {
+    position: absolute;
+    left: 8%;
+    top: 35%;
+    width: 15px;
+    height: 15px;
+    color: rgb(73, 37, 204);
+}
+
+.detailsGlyph2:hover {
+    color: darkblue;
+}
+
+.formInformation {
+    visibility: hidden;
+    position: absolute;
+    left: -3000%;
+    top: -1150%;
+    background-color: rgb(30, 19, 37);
+    border: solid black 1px;
+    color: white;
+    font-family: "Varela Round";
+}
+
+.formInformation2 {
+    visibility: hidden;
+    position: absolute;
+    left: -3000%;
+    top: -970%;
+    background-color: rgb(30, 19, 37);
+    border: solid black 1px;
+    color: white;
+    font-family: "Varela Round";
+}
+
+.detailsGlyph:hover .formInformation {
+    visibility: visible;
+}
+
+.detailsGlyph2:hover .formInformation2 {
+    visibility: visible;
+}
+
+.errorArea {
+    visibility: hidden;
+    position: absolute;
+    left: -1480%;
+    top: -965%;
+    background-color: rgb(30, 19, 37);
+    border: solid black 1px;
+    color: white;
+    font-family: "Varela Round";
+}
+
+.errorArea2 {
+    visibility: hidden;
+    position: absolute;
+    left: -1700%;
+    top: -1075%;
+    background-color: rgb(30, 19, 37);
+    border: solid black 1px;
+    color: white;
+    font-family: "Varela Round";
+}
+
+
+.errorArea3 {
+    visibility: hidden;
+    position: absolute;
+    left: -2500%;
+    top: -1170%;
+    background-color: rgb(30, 19, 37);
+    border: solid black 1px;
+    color: white;
+    font-family: "Varela Round";
+}
+
+.errorArea4 {
+    visibility: hidden;
+    position: absolute;
+    left: -1500%;
+    top: -1075%;
+    background-color: rgb(30, 19, 37);
+    border: solid black 1px;
+    color: white;
+    font-family: "Varela Round";
+}    
+
+.errorGlyphActive {
+    visibility: visible;
+    position : absolute;
+    left: 5%;
+    top: 15%;
+    color: red;
+}
+
+.detailsGlyph2:hover .errorGlyphActive {
+    visibility: hidden;
+}
+
+.errorGlyphActive:hover {
+    color: darkred;
+}
+
+
+.errorGlyphActive2 {
+    visibility: visible;
+    position : absolute;
+    left: 5%;
+    top: 15%;
+    color: red;
+}
+
+.detailsGlyph2:hover .errorGlyphActive2 {
+    visibility: hidden;
+}
+
+.errorGlyphActive2:hover {
+    color: darkred;
+}
+
+.errorGlyphActive3 {
+    visibility: visible;
+    position: absolute;
+    left: 5%;
+    top: 34.9%;
+    color: red;
+}
+
+.detailsGlyph2:hover .errorGlyphActive3 {
+    left: -120%;
+    top: 0%;
+}
+
+.errorGlyphActive3:hover {
+    color: darkred;
+}
+
+.errorGlyphActive4 {
+    visibility: visible;
+    position: absolute;
+    left: 5%;
+    top: 34.9%;
+    color: red;
+}
+
+.detailsGlyph2:hover .errorGlyphActive4 {
+    left: -120%;
+    top: 0%;
+}
+
+.errorGlyphActive4:hover {
+    color: darkred;
+}
+
+.errorGlyphHidden  {
+    visibility: hidden;
+}
+
+.errorGlyphActive:hover .errorArea {
+    visibility: visible;
+}
+
+.errorGlyphActive2:hover .errorArea2{
+    visibility: visible;
+}
+
+.errorGlyphActive3:hover .errorArea3{
+    visibility: visible;
+}
+
+.errorGlyphActive4:hover .errorArea4{
+    visibility: visible;
+}
+
+h5 {
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+h6 {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+}
